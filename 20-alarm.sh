@@ -11,4 +11,5 @@ if [ ! -n "$(pacman -Qs pacaur)" ]; then
 fi
 
 echo "All set! You should now be ready to manage your system with Ansible."
+echo "The first things you should do are: set up another user, delete the alarm user, and change the root password."
 exit 0
