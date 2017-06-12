@@ -52,5 +52,6 @@ echo "Installing build prerequisites..."
 pacman -Sy binutils make gcc fakeroot expac yajl git cower --noconfirm --needed
 
 echo "You should reboot, and optionally set a static IP designation in your router now."
-echo "Then, run the 20-alarm.sh script as the 'alarm' user to continue."
+echo "Then, log in as the alarm user and run:"
+echo "'curl -s https://raw.githubusercontent.com/bmcclure/ansible-preprovision/master/20-alarm.sh | bash'"
 exit 0
