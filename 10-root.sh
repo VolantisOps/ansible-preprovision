@@ -28,8 +28,7 @@ pacman -Sy sudo --noconfirm --needed
 echo '%wheel ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/wheel
 usermod -G wheel alarm
 
-echo "What hostname would you like the server to have? "
-read hostname
+read -p "What hostname would you like the server to have?" hostname </dev/tty
 
 echo "Setting hostname..."
 hostnamectl set-hostname $hostname
@@ -38,8 +37,7 @@ echo "Setting up SSH access for root"
 mkdir -p /root/.ssh
 chmod 700 /root/.ssh
 
-echo "What is your GitHub username for pulling in authorized keys? "
-read githubuser
+read -p "What is your GitHub username for pulling in authorized keys?" githubuser </dev/tty
 
 echo "Installing authorized_keys..."
 curl -o /root/.ssh/authorized_keys https://github.com/${githubuser}.keys
