@@ -16,7 +16,7 @@ curl -o /root/.ssh/authorized_keys https://github.com/${githubuser}.keys
 chmod 600 /root/.ssh/authorized_keys
 
 echo "Installing python2..."
-pacman -Sy python2 --noconfirm --needed
+pacman -Sy python2 sudo --noconfirm --needed
 
 echo "You should now be ready to finish provisioning with Ansible."
 exit 0
